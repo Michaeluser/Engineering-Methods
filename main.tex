@@ -7,16 +7,16 @@
 %\usepackage[T1]{fontenc}
 \usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
 \usepackage{url} % príkaz \url na formátovanie URL
 \usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
 
 \usepackage{cite}
+\graphicspath{{images/}}
 %\usepackage{times}
 
 \pagestyle{headings}
 
-\title{Delivering Relevant Product Recommendations in Finance\thanks{Semester project from subject Engineering methods, academic year 2024/25, management: Martin Sabo}} % meno a priezvisko vyučujúceho na cvičeniach
+\title{Delivering Relevant Product Recommendations in Finance\thanks{Semester project from subject Engineering methods, academic year 2024/25, management: Martin Sabo}} % 
 
 \author{Mykhailo Chepara\\[2pt]
 	{\small Slovak Technical University in Bratislava}\\
@@ -73,12 +73,45 @@ Now to the points that I'm going to untangle in this article:
     
     \end{itemize}
     
-sources - https://kanini.com/blog/banking-recommendation-system-use-cases/
+
 \end{itemize}
 
+sources - https://kanini.com/blog/banking-recommendation-system-use-cases/
 
 \end{abstract}
 
+
+\tableofcontents
+
+\section{Recommendation system}
+
+\subsection{Definition of a recommendation system}
+Recommendation system is an algorithm which is trained on huge amounts of data in order to mimic or predict next purchases of the customer on whom data it was trained on.
+In a nutshell it takes one record of data per time and iterates with it to specify parameters and refine them, it does it with each and every record by that becoming more accurate.
+
+So it's a system designed for each and every customer individually
+
+\subsection{Variations of recommendation systems}
+
+
+\section{Structures and principles of workflow}
+
+\subsection{Structure}
+Blah blah blah...
+\begin{center}
+
+%\begin{{figure}[h!]
+
+%\caption{Structure of the system}
+\includegraphics[width=0.8\textwidth]{system_structure}
+\includegraphics[width=0.8\textwidth]{system_types}
+
+%\end{figure}
+
+\end{center}
+Some of the \textbf{greatest}
+discoveries in \underline{science} 
+were made by \textbf{\textit{accident}}.
 
 
 % \section{Introduction}
@@ -166,4 +199,9 @@ sources - https://kanini.com/blog/banking-recommendation-system-use-cases/
 % % týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
 % \bibliography{literature}
 % \bibliographystyle{alpha} % prípadne alpha, abbrv alebo hociktorý iný
+
+% Sources
+
+%Shcolar - https://link.springer.com/chapter/10.1007/978-981-13-7025-0_34
+%Scolar - https://www.sciencedirect.com/science/article/pii/S0957417412002825#f0005 
 \end{document}
