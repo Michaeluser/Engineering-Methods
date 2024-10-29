@@ -33,76 +33,143 @@
 
 \maketitle
 
-
 \begin{abstract}
 To begin with why is that topic? 
 One of my friends is working in a financing company, therefore I'm genuinely curious how does a bank recommend products to it's customers. It's a useful tool for a bank to increase it's revenue but can it be enhanced? And if yes then how?
 
 Now to the points that I'm going to untangle in this article:
 \begin{itemize}
-    \item What's a recommendation system
-    \begin{itemize}
-        \item Types of recommendation systems
-    \end{itemize}
-    
+    \item What is a recommendation system
+    \item Distribution of the systems based on thier architecture
+    \item Usage cases in real life
     \item How does a recommendation system in a bank work
     \begin{itemize} 
-             \item It's structure: ways of utilizing data
-             \item Algorithms
-             \item Which data types are used
+             \item Architecture and ways of utilizing data
+             \item Algorithms applied
+             \item Data types used
     \end{itemize}
     
-    \item Time it takes to learn and to be able to recommend something
+    \item Conditions to be met before deployment of the system
     \begin{itemize}
-        \item When it learns the most efficiently and can you increase speed of learning
+        \item Learning conditions
+        \item Duration of learning
+        \item And other conditions
     \end{itemize}
     
-    \item Issues with system
+    \item Issues with the system
     \begin{itemize}
         \item Lack of data
         \item New item introduction
-        \item Disability to recommend anything relevant to a user
+        \item Unability to recommend anything relevant to a user
+        \item And other isssues
     \end{itemize}
     
     \item Enhancement of the system
     \begin{itemize}
-        \item Merging the system with another system in order to increase it's efficiency and accuracy
-        \item Which systems can be fused with recommendation system
-        \item Can something new be embedded into it
-        \item What can be embedded
-    
+        \item Possibility of merging a recommendation system with another system
+        \item Systems that can be merged with recommendation system
+        \item Resolving problems occuring in the system
+        \item Other improvements
     \end{itemize}
     
 
 \end{itemize}
 
-sources - https://kanini.com/blog/banking-recommendation-system-use-cases/
 
 \end{abstract}
 
 
 \tableofcontents
+\newpage
+
+
+
+
+
+
+
+
+
 
 \section{Recommendation system}
 
-\subsection{Definition of a recommendation system}
-Recommendation system is an algorithm which is trained on huge amounts of data in order to mimic or predict next purchases of the customer on whom data it was trained on.
-In a nutshell it takes one record of data per time and iterates with it to specify parameters and refine them, it does it with each and every record by that becoming more accurate.
+\subsection{Definition of a recommendation system and its objective}
+Nowadays people buy a lot of things on the internet, they watch a lot of films and do a lot of other stuff. Since there's such a rich amount of choises it's hard to find the ones people would choose. For that reason reommandation system was introduced. A recommendation system also called recommender system is a program which recommends user a product/service which he/she most probably would buy. The system is trained on huge amounts of data. Ultimately it tries to predict next probable choise of a customer and then recommends it. It could be next film watched, next purchase bought or next route on the road recommended. The data is provided by the customer's overall experience. It could be purchases, filmes watched, time used on app and so on. So it's a system adapting to each customer's needs and preferences.\cite{vars_rec_sys}
 
-So it's a system designed for each and every customer individually
+\subsection{Distribution of the systems based on thier architecture}
+The systems are divided into few main categories. Some of them are content-based systems, collaborative systems and hybrid systems. Here is a graph of them in detail
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{system_vars}
+\caption{Distribution of systems based on the architecture}\cite{wang2019review}
+\label{fig:System categories}
+\end{figure}
+\par Collaborative filtering is one of the most used types of recommendation systems in the world. Collaborative filtering recommends something based on preferences of another user which has common traits with the current one. 
 
-\subsection{Variations of recommendation systems}
+Advantages of the system type:
+\begin{itemize}
+\item Filtering complex information:
+It can filter information which is hard to analyze automatically by machines, that is music, art etc. 
+\item Recommending completely new information:
+It's able to recommend utterly distingush information to the one introduced prior
+\item Utilizing feedback of similar users:
+It effectively use info of other similar users to the current one and give out useful results
+\end{itemize}
+
+Disadvantages of the system type
+\begin{itemize}
+\item Rarity:
+Amount of projects and users is big and useres don't rate each and every project used therefore there are no common scores between them, resulting in similarity cannot be calculated
+\item Multiple Content:
+Colaborative filtering doesn't take into account influence of categories onto the recommendation
+\item Scalability:
+The number of users and projects is increasing each day. Henceforth system needs more and more time to compute bigger and bigger matrices of users and projects. So the probem of scalability occurs.
+\end{itemize}
+
+\par Content-based filtering is the most used type of systems in academic search engines. The plain idea of it is to record which object user has chosen from list of recommended objects and then analyze it, based on that it recommends next the most relevant object. For example it can recommend an article with attributes academic, fresh and popular. The point is to recommend an object which has biggest similarity by description to the description provided by user.
+Content-based recommendations consists of the following three steps:
+\begin{itemize}
+\item Extracting features and build model that descibe resources
+\item Compare current features's similarity with previous features's in order to decide if recommendation is viable
+\item In conformance to similarity of the items to current item an array of items is selected and recommended to user
+\end{itemize}
+Advantages
+\begin{itemize}
+\item It doesn't need data of other users, and can start working without it
+\item It's able to adapt to user's individual preferences in order to make personalized recommendations
+\item It can recommend any new projects, no problem with new objects recommendations
+\item It can be easily explained why objects are recommended based on their characteristics and current preferenced characteristics
+\end{itemize}
+
+Disadvantages
+\begin{itemize}
+\item If user changes his profile his preferences are gone, and now system needs to adapt to user's preferences again
+\item There's a possibility that system will recommend the same product user liked before
+\item Problem of lack of the history, thus at the beginning there's no data provided by user which mean the accuracy is low
+\end{itemize}
+
+\subsection{Usage cases in real life}
 Here are the main variations of recommendation systems which are used the most commonly.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{system_types}
-\caption{Most common system types}
+\caption{Most commonly used system types}
 \label{fig:Types}
 \end{figure}
-\section{Structures and principles of workflow}
+\newpage
 
-\subsection{Structure}
+
+
+
+
+
+
+
+
+
+\section{Architecture and principles of workflow}
+\subsection{Architecture}
 Blah blah blah...
 
 \begin{figure}[h]
@@ -114,106 +181,13 @@ Blah blah blah...
 
 
 
-
-
-Some of the \textbf{greatest}
-discoveries in \underline{science} 
-were made by \textbf{\textit{accident}}.
-
-$\begin{pmatrix}
-1&3&5&23&09\\
-23&10&-19&-12&4\\
-0&-15&2&11&8\\
-56&7&19&16&-2\\
-40&7&9&0&-5
-\end{pmatrix}$
-% \section{Introduction}
-
-% Motivate the reader and explain what you're going to write about. Introduction mostly of the times doesn't seclude on more than 1 part.
-
-% State explicitly the structure of the article. Here is some example.
-% The basic problem that was indicated in the introduction is explained in more detail in the section~\ref{any}.
-% Important contexts are given is sections~\ref{important} and~\ref{significant}.
-% Concluding notations establishes part~\ref{inference}.
-
-
-
-% \section{Some part} \label{any}
-
-% From pic.~\ref{f:rozhod} everything is clear. 
-
-% \begin{figure*}[tbh]
-% \centering
-% %\includegraphics[scale=1.0]{diagram.pdf}
-% Text can also be presented as an image. It will become a marker floating object. After creating the diagram, cancel the sign \texttt{\%} before the command\verb|\includegraphics| denote this row as a comment (also using symbol\texttt{\%}).
-% \caption{Choosing argument.}
-% \label{f:rozhod}
-% \end{figure*}
-
-
-
-% \section{Another part} \label{another}
-
-% The main problem is\ldots{} First things first let's look at an explanation (part~\ref{another:any}), and than on another (part~\ref{another:any}).\footnote{Sometimes you might need symbol over a footer too.}
-
-% It can seem like problem doesn't exist\cite{Coplien:MPD}, but it was proved wrong~\cite{Czarnecki:Staged, Czarnecki:Progress}. Nevertheless, even today on the web we come across all kinds of dubious opinions\cite{PLP-Framework}. Important thing can be \emph{emphasized by cursive text}.
-
-
-% \subsection{Some sort of explanation} \label{another:any}
-
-% Sometimes you need to make a list:
-
-% \begin{itemize}
-% \item First thing
-% \item Second thing
-% 	\begin{itemize}
-% 	\item First item
-% 	\item Second item
-% 	\end{itemize}
-% \end{itemize}
-
-% The same list but marked by letters and numbers:
-
-% \begin{enumerate}
-% \item First thing
-% \item Second thing
-% 	\begin{enumerate}
-% 	\item First item
-% 	\item second item
-% 	\end{enumerate}
-% \end{enumerate}
-
-
-% \subsection{Some more explanation} \label{something different:etc.}
-
-% \paragraph{Something very important.}
-% Sometimes it is necessary to mark a paragraph with a heading. Text continues straight after the denotation.
-
-
-
-% \section{An important part} \label{important}
-
-
-% \section{}
-
-
-% \section{Even more significant part} \label{more important}
+Some of the \textbf{greatest} discoveries in \underline{science}  were made by \textbf{\textit{accident}}.
 
 
 
 
-% \section{Inference} \label{conclusion} % prípadne iný variant názvu
-
-
-
-% %\acknowledgement{Ak niekomu chcete poďakovať\ldots}
-
-
-% % týmto sa generuje zoznam literatúry z obsahu súboru literatura.bib podľa toho, na čo sa v článku odkazujete
-% \bibliography{literature}
-% \bibliographystyle{alpha} % prípadne alpha, abbrv alebo hociktorý iný
-
-% Sources
+\bibliography{literature}
+\bibliographystyle{plain}
 
 %Shcolar - https://link.springer.com/chapter/10.1007/978-981-13-7025-0_34
 %Scolar - https://www.sciencedirect.com/science/article/pii/S0957417412002825#f0005 
