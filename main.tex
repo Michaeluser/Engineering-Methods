@@ -5,48 +5,52 @@
 \usepackage{graphicx} % Required for inserting images
 
 %\usepackage[T1]{fontenc}
-\usepackage[IL2]{fontenc} % lepšia sadzba písmena Ľ než v T1
+\usepackage[IL2]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{url} % príkaz \url na formátovanie URL
-\usepackage{hyperref} % odkazy v texte budú aktívne (pri niektorých triedach dokumentov spôsobuje posun textu)
+\usepackage{url} % block \url for formatting URL
+\usepackage{hyperref} %links in text will be active(for some classes of documents makes document shift)
 \usepackage{amsmath}
 \usepackage{cite}
 \graphicspath{{images/}}
+\usepackage{wrapfig}
 %\usepackage{times}
 
 \pagestyle{headings}
 
-\title{Delivering Relevant Product Recommendations in Finance\thanks{Semester project from subject Engineering methods, academic year 2024/25, management: Martin Sabo}} % 
+\AtBeginDocument{%
+    \setlength\abovedisplayskip{5pt}%
+    \setlength\belowdisplayskip{5pt}%
+    \setlength\abovedisplayshortskip{-8pt}%
+    \setlength\belowdisplayshortskip{2pt}}
+\begin{document}
+
+
+\title{Delivering Relevant Product Recommendations in Finance\thanks{Semester project from subject Engineering methods, academic year 2024/25, management: Martin Sábo}} 
 
 \author{Mykhailo Chepara\\[2pt]
 	{\small Slovak Technical University in Bratislava}\\
 	{\small Faculty of Information and Information Technologies}\\
 	{\small \texttt{xchepara@stuba.sk}}
 	}
-
-\date{\small October 1 2024} % upravte
-
-
-
-\begin{document}
+    \date{\small October 1 2024}
 
 
 \maketitle
 
 \begin{abstract}
-To begin with why is that topic? 
-One of my friends is working in a financing company, therefore I'm genuinely curious how does a bank recommend products to it's customers. It's a useful tool for a bank to increase it's revenue but can it be enhanced? And if yes then how?
+To begin with, why is that topic? 
+One of my friends is working in a financing company, therefore I'm genuinely curious how does a bank recommend products to it's customers. As well as how do some systems recommend stock recommendations to investors. It's a useful tool for bank to increase it's revenue. For an investor a significant instrument that can offer good offers on a trade market. Can it be enhanced? And if yes then how?
 
 Now to the points that I'm going to untangle in this article:
 \begin{itemize}
-    \item What is a recommendation system
-    \item Distribution of the systems based on thier architecture
+    \item What is a recommendation system?
+    \item Distribution of the systems based on their category
     \item Usage cases in real life
-    \item How does a recommendation system in a bank work
+    \item Architecture and concept of work
     \begin{itemize} 
-             \item Architecture and ways of utilizing data
-             \item Algorithms applied
-             \item Data types used
+         \item Architecture and ways of utilizing data
+         \item Algorithms applied and models used
+         \item Data fetch and processing
     \end{itemize}
     
     \item Conditions to be met before deployment of the system
@@ -60,31 +64,29 @@ Now to the points that I'm going to untangle in this article:
     \begin{itemize}
         \item Lack of data
         \item New item introduction
-        \item Unability to recommend anything relevant to a user
-        \item And other isssues
+        \item Inability to recommend anything relevant to a user
+        \item And other issues
     \end{itemize}
     
     \item Enhancement of the system
     \begin{itemize}
-        \item Possibility of merging a recommendation system with another system
-        \item Systems that can be merged with recommendation system
-        \item Resolving problems occuring in the system
+        \item Augmentation of one system with another
+        \item Systems that can be merged with recommendation system in finance
         \item Other improvements
-    \end{itemize}
-    
-
+    \end{itemize}\cite{arch_rec_sys}
 \end{itemize}
 
 
 \end{abstract}
 
-
 \tableofcontents
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\textwidth]{STU-FIIT-anch}
+\end{figure}
+
 \newpage
-
-
-
-
 
 
 
@@ -94,98 +96,150 @@ Now to the points that I'm going to untangle in this article:
 \section{Recommendation system}
 
 \subsection{Definition of a recommendation system and its objective}
-Nowadays people buy a lot of things on the internet, they watch a lot of films and do a lot of other stuff. Since there's such a rich amount of choises it's hard to find the ones people would choose. For that reason reommandation system was introduced. A recommendation system also called recommender system is a program which recommends user a product/service which he/she most probably would buy. The system is trained on huge amounts of data. Ultimately it tries to predict next probable choise of a customer and then recommends it. It could be next film watched, next purchase bought or next route on the road recommended. The data is provided by the customer's overall experience. It could be purchases, filmes watched, time used on app and so on. So it's a system adapting to each customer's needs and preferences.\cite{vars_rec_sys}
+Nowadays, people buy a lot of things on the internet, they watch a lot of films and do a lot of other stuff. Since there's such a rich number of choices, it's hard to find the ones people would choose. For that reason, a recommendation system was introduced. A recommendation system, also called, recommender system, is a program whose main point is to recommend users a product/service which he/she most probably will buy. Ultimately, it tries to predict the next probable choice of a customer and then recommends it. It could be the next film watched, the next purchase bought or the next route on the road recommended. The data is provided from the customer's overall experience. So it's a system, adapting to each customer's needs and preferences.\cite{vars_rec_sys}
+\subsection{Recommendation system in Finance}
+\par  The system we're going to talk about is a system which recommends offers on stock or any other liquidity markets. Since a lot of people buy stocks to earn money, and a lot of them would be happy to know where prices on the stock market will go, a necessity in finance recommendation systems has appeared. It's hard to predict stock prices: it depends on factors such as inflation, supply, demand, company's state, economic reports, news, investor's sentiment etc. Adding to that probability of factors influencing each other, prices can strongly fluctuate. Offers are chosen according to the certainty of a successful sale. Thus, it's going to be easier to buy and sell them.\cite{stock_rec}\cite{stock_prices}
 
-\subsection{Distribution of the systems based on thier architecture}
-The systems are divided into few main categories. Some of them are content-based systems, collaborative systems and hybrid systems. Here is a graph of them in detail
+\subsection{Distribution of the systems based on their category}
+The systems are divided into few main categories. Some of them are content-based systems, collaborative systems and hybrid systems. Here is a graph of most famous ones
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{system_vars}
-\caption{Distribution of systems based on the architecture}\cite{wang2019review}
+\includegraphics[width=1\textwidth]{system_vars}
+\caption{Distribution of systems based on their category}\cite{wang2019review}
 \label{fig:System categories}
 \end{figure}
-\par Collaborative filtering is one of the most used types of recommendation systems in the world. Collaborative filtering recommends something based on preferences of another user which has common traits with the current one. 
 
-Advantages of the system type:
-\begin{itemize}
-\item Filtering complex information:
-It can filter information which is hard to analyze automatically by machines, that is music, art etc. 
-\item Recommending completely new information:
-It's able to recommend utterly distingush information to the one introduced prior
-\item Utilizing feedback of similar users:
-It effectively use info of other similar users to the current one and give out useful results
-\end{itemize}
 
-Disadvantages of the system type
-\begin{itemize}
-\item Rarity:
-Amount of projects and users is big and useres don't rate each and every project used therefore there are no common scores between them, resulting in similarity cannot be calculated
-\item Multiple Content:
-Colaborative filtering doesn't take into account influence of categories onto the recommendation
-\item Scalability:
-The number of users and projects is increasing each day. Henceforth system needs more and more time to compute bigger and bigger matrices of users and projects. So the probem of scalability occurs.
-\end{itemize}
+Here are the most widely used recommendation systems today.
+\par \textbf{Collaborative systems} is one of the most used types of recommendation systems in the world. Collaborative system recommends something based on preferences of another user which has common traits with the current one. Advantages are filtering complex information, recommending completely new information, utilizing feedback of similar users. Disadvantages are rarity of scores, multiple content, scalability.
 
-\par Content-based filtering is the most used type of systems in academic search engines. The plain idea of it is to record which object user has chosen from list of recommended objects and then analyze it, based on that it recommends next the most relevant object. For example it can recommend an article with attributes academic, fresh and popular. The point is to recommend an object which has biggest similarity by description to the description provided by user.
-Content-based recommendations consists of the following three steps:
-\begin{itemize}
-\item Extracting features and build model that descibe resources
-\item Compare current features's similarity with previous features's in order to decide if recommendation is viable
-\item In conformance to similarity of the items to current item an array of items is selected and recommended to user
-\end{itemize}
-Advantages
-\begin{itemize}
-\item It doesn't need data of other users, and can start working without it
-\item It's able to adapt to user's individual preferences in order to make personalized recommendations
-\item It can recommend any new projects, no problem with new objects recommendations
-\item It can be easily explained why objects are recommended based on their characteristics and current preferenced characteristics
-\end{itemize}
 
-Disadvantages
-\begin{itemize}
-\item If user changes his profile his preferences are gone, and now system needs to adapt to user's preferences again
-\item There's a possibility that system will recommend the same product user liked before
-\item Problem of lack of the history, thus at the beginning there's no data provided by user which mean the accuracy is low
-\end{itemize}
+\par \textbf{Content-based system} is the most used type of system in academic search engines. The plain idea of it is to record which object the user has chosen from the list of recommended products and then analyze it, based on the most relevant object next. For example, academic, fresh attributes. The point is to recommend an object which has the biggest similarity in terms of description to the description provided by the user. Advantages are cold start, ability to adapt to user's preferences, no problem with new objects recommendation. Disadvantages: in case of a user's account deletion, his preferences are gone, it might recommend the same product multiple times, and lack of history. 
 
+
+\par \textbf{Knowledge-Based Recommendation system} is a type of recommendation system which uses auxiliary information about products and users to give out appropriate results. This kind of recommendation system has an advantage against regular systems are content-based cold start. 
+Advantages: history of ratings isn't required, recommendations aren't dependent on user's preferences, so user's data isn't needed. Disadvantages: knowledge acquisition bottleneck, lack of needed information.
+
+
+
+
+\par \textbf{Hybrid-Based Recommendation system} consists of multiple system types which cancel out each other's flaws. It has 7 main strategies for filtering. Here are a few of them.
+\par Switching: this method basically selects a recommender system based on its accuracy. Feature combination: ultimately, one system is complemented by features of another. 
+Feature Augmentation: each time a new item is recommended, new feature is offered based on which next recommendation is made, so each new recommendation is made using previous features. 
+Meta-level: recommendation system uses an input output of another system. 
 \subsection{Usage cases in real life}
-Here are the main variations of recommendation systems which are used the most commonly.
+Here are the main variations of recommendation systems which are most commonly used.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{system_types}
+\includegraphics[width=1\textwidth]{system_types}
 \caption{Most commonly used system types}
 \label{fig:Types}
 \end{figure}
-\newpage
+\par Spotify, Apple Music, YouTube music and other platforms use recommendation systems to match their user's preferences and show appropriate results for search requests. In that particular field of human art, collaborative filtering and content-based filtering is used in most cases.\cite{music_rec}
+\par Google Play Books, Open Library, and Goodreads are apps that manifest the power of recommendation system for recommending books, articles and other handwritten works to their customers. Matrix factorization - collaborative filtering algorithm which is used for this scope as a default decision for recommending desired results.\cite{book_rec}
+\par Microsoft Word, Excel, PowerPoint, all of them use file recommendation in order to keep track of important work by recommending files which were frequently edited, commented or people were mentioned in them.\cite{file_rec} 
+\par Netflix, Amazon Prime Video, and Hulu use, systems recommendation systems to recommend movies, TV shows and animes to their clients, which increases profits significantly. For example, Netflix reported saving \$1 billion dollars by engaging customers with recommended movies. Techniques of collaborative filtering, content-based filtering, and hybrid filtering are used to generate precise apposite recommendations to a customer.\cite{movie_rec}
+\par Amazon, Target and L’Oréal are companies which honed their recommendation systems to the highest possible precision to gain the most revenue. Amazon even made its own personalization system called Amazon Personalize systems applies machine learning algorithms to sort out necessary data and use it for systems. In general, it uses a collaborative filtering method.\cite{shopping_rec}\cite{amazon_recsys}
 
 
-
-
-
-
-
-
-
-
-\section{Architecture and principles of workflow}
-\subsection{Architecture}
-Blah blah blah...
+\section{Architecture and concept of work}
+Recommendation system in finance can recommend products as well as it can recommend offers which can lead to revenue of individuals. Here's an overall architecture of system capable of recommending fitting stock recommendations
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.8\textwidth]{system_structure}
-\caption{Structure of most systems}
-\label{fig:Types}
+\includegraphics[width=1\textwidth]{architecture_diagram}
+\caption{Architecture of finance recommendation system}
+\label{fig:Architecture}
 \end{figure}
 
+\subsection{Data fetch}
+\par In a nutshell, data is collected as a first step. News data is sent into a NLP(Natural Language Processing) preprocessor which decodes sentences and assesses whether news is good or bad. Later conclusion of news processing is used in evaluation of offers. Subsequently, stock market data is analyzed and the conclusion about market volatility is made. Volatility is considered a measurement of the speed at which prices and their ranges change. And then all the data left is separated into training and test data. After which training is made and then, the system recommends the most favorable offers on the market, also including investor's preferences. 
+\par Data is collected using API (Application Programming Interface) from trustworthy news sources such as Yahoo Finance, American Stock Market and Alpha Vintage, CNBC, Stock Market and many others.\cite{stock_comp} 
+\par Steps for an API to parse data from news websites and stock market data providers. Firstly, it authenticates, uses tokens and API keys to access a website's data, so nobody else will get to it. Then it configures and sends what type of data will be retrieved. Based on the response from the server, it either sends back another request or waits in case of the server being down. Then it receives requested data and saves it into an already existing database.
+\subsection{Data processing}
+\par Data variables retrieved from stock market providers are: Date, Open, Close, Volume, High, Low, Adjusted close. Percentage Change (Returns) is a crucial variable which predicts how much the price has grown or declined. It measures the volatility of the market. So, to summarize, text data types and number data types are used in calculations for a recommendation. Text obtained from news is preprocessed. Preprocessing consists of a few stages:
+\begin{itemize}
+    \item Text cleaning, which includes stop word removal, lowercasing words, removing characters, removing numbers, removing unnecessary words.
+    \item Normalization is stemming and lemming words. It essentially means to get the root of each word and normalizing words according to their dictionary forms.
+    \item Tokenization. Ultimately, it's dividing text into meaningful sections such as paragraphs, sentences or words. In our case, it's words. So each part is called a token.
+    \item Feature extraction is achieved by vectorization. Vectorization means that each token is converted into a corresponding numerical value. 
+    \item Data transformation. This stage is optional. PCA (Principal, component analysis), t-SNE and UMAP (Manifold Learning), ICP (Independent component analysis), LDA (Linear Discriminant analysis) and other techniques can be used to decrease dimension of feature set matrix.\cite{dimens_red}
+    \item Splitting data for analysis. Data is split into training and testing data.\cite{nlp_research1}\cite{nlp_research2}
+\end{itemize}
+For example, in the article about stock recommendation systems\cite{stock_rec} at the data preprocessing stage there were used methods and algorithms: Stemmer Algorithm, WordNet Lemmatizer, and Stop word removal. After, what data was vectorized using the TF-IDF(Term Frequency Inverse Document Frequency) vectorizer.\cite{stem_alg}\cite{lemm_alg} TF-IDF calculates the tangency value for each word in all the documents in our case datasets. 
+Term frequency(TF) is calculated using the formula:
+\[ \alpha = \frac{\beta}{\gamma}\]
+Where $\alpha$ represents term(word) frequency. $\beta$ is number of occurrences of word in the document and $\gamma$ is total number of words in the document.
+\newline
+Inverse document frequency(IDF) is calculated using the following formula
+\[ \sigma = \log (\frac{\rho}{\epsilon} + 1)\]
+Where $\sigma$ represents inverse document frequency value. $\rho$ is total number of documents and $\epsilon$ is number of documents in which our word occurs. 
+\newline 
+And so the TF-IDF is represented by this formula
+\[ TF-IDF = \alpha*\sigma\]
+\par Main analysis of the data can be  conducted using Random Forest Algorithm, LSTM model and Logistic Regression. Nevertheless, it could be done differently using other ANNs(Artificial Neural Networks) and RNNs(Recursive NEural Networks) complemented by Naive Bayes classifier or SVM(Support Vector Machines).
+
+\subsection{Algorithms and models used}
+\subsubsection {Models used to predict prices on the market} 
+
+Now for the data analysis of the stock market dataset. There are lots of models for analyzing and predicting data, but in our case, to foretell prices in such an unpredictable market, sophisticated models are required, which must forecast the volatility of the market. Furthermore, they must know how to work with time series.
+
+Here are some examples of models that can be used for prediction.
+\newline\textbf{Statistical models}:
+\newline ARIMA(AutoRegressive Integrated Moving Average) models. They work well with a series of data points. By finding, dependency between them, they find the volatility rate of the market.
+\newline GARCH(Generalized Autoregressive Conditional Heteroskedasticity) are also used for forecasting market volatility as well as the degree of risk.
+\newline
+\textbf{Deep learning Models}:
+\newline ANN(Artificial Neural Networks) can learn complex relationships and are made of several layers of interconnected points(nodes). But are not suitable for unpredictable market.
+\newline RNN(Recurrent Neural Networks) are designed to work with successive data. But they're suffering form vanishing gradient problem
+\newline LSTM(Long Short-Term Memory) model is a type of RNN which has resolved the issue of vanishing gradient. It fits the best among models to predict prices.
+\newline There are, of course, other model types, but we'll stop on the LSTM model, since it's the most efficient and suited for our purpose. 
+\newline
+\newline LSTM model is made of three main parts named gates. Input gate, forget gate and output gate. All the gates control the flow of information. Information is splitted into cells and hidden states. Cell state represents the long-term memory. The hidden state represents short-term memory. Gates are used to forget, save and update information throughout the period of learning. 
+\newline Forget Gate: 
+\[f_{t} = \sigma (W_{f}*[h_{t-1}, x_{t}] + b_{f})\]
+$W_{f}$ and $b_{f}$ are weights and bias of the forget state. $f_{t}$ is the output of the forget state. If it's close to 0 it's forgotten if close to 1 it's remembered. $h_{t-1}$ is previous short-term memory value. $x_t$ is current input value(record)
+\newline Input Gate:
+\begin{align*}
+    i_{t} = \sigma(W_{i} * [h_{t-1}, x_{t}] + b_{i}) \\
+    \Tilde{C_{t}} = \tanh{W_{C}*[h_{t-1}, x_{t}] + b_{C}}
+\end{align*}
+$i_t$ determines whether to remember or not the value of the new input. $C_t$ is value for the new input.
+\newline Cell state update:
+\begin{align*}
+    C_t &= f_t * C_{t-1} + i_t * \tilde{C}_t \\
+\end{align*}
+$C_t$ is new long-term memory $f_t$ is forget gate, $C_{t-1}$ is previous long-term memory and $i_t$, $C_t$ are values from input gate.
+\newline Output gate:
+\begin{align*}
+    o_t &= \sigma(W_o \cdot [h_{t-1}, x_t] + b_o) \\
+    h_t &= o_t * \tanh(C_t)
+\end{align*}
+$h_t$ is output of an entire LSTM unit and is called new short-term memory. Whereas $o_t$ decides whether to keep that new memory or discard of it.
+The hidden layer output is the value predicted by our system.
+\section{Conditions to be met before deployment of the system}
+
+\subsection{Learning conditions}
+
+\subsection{Duration of learning}
+
+\section{Issues with the system}
+
+\subsection{Lack of data}
+
+\subsection{New item introduction}
+
+\subsection{Other problems}
+ 
+\section{Enhancement of the system}
+
+\subsection{Augmentation of one system with another}
+
+\subsection{Systems competent of complementing stock recommendation system}
 
 
-Some of the \textbf{greatest} discoveries in \underline{science}  were made by \textbf{\textit{accident}}.
-
-
-
-
+\newpage
 \bibliography{literature}
 \bibliographystyle{plain}
 
