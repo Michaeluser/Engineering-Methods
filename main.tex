@@ -13,14 +13,15 @@
 \usepackage{cite}
 \graphicspath{{images/}}
 \usepackage{wrapfig}
+\usepackage{geometry}
 %\usepackage{times}
-
+\newgeometry{vmargin = {30mm}, hmargin = {17mm, 17mm}}
 \pagestyle{headings}
 
 \AtBeginDocument{%
     \setlength\abovedisplayskip{5pt}%
     \setlength\belowdisplayskip{5pt}%
-    \setlength\abovedisplayshortskip{-8pt}%
+    \setlength\abovedisplayshortskip{2pt}%
     \setlength\belowdisplayshortskip{2pt}}
 \begin{document}
 
@@ -78,7 +79,7 @@ Now to the points that I'm going to untangle in this article:
 
 
 \end{abstract}
-
+\newpage
 \tableofcontents
 
 \begin{figure}[h!]
@@ -128,7 +129,7 @@ Advantages: history of ratings isn't required, recommendations aren't dependent 
 Feature Augmentation: each time a new item is recommended, new feature is offered based on which next recommendation is made, so each new recommendation is made using previous features. 
 Meta-level: recommendation system uses an input output of another system. 
 \subsection{Usage cases in real life}
-Here are the main variations of recommendation systems which are most commonly used.
+The main variations of recommendation systems which are most commonly used.
 
 \begin{figure}[h]
 \centering
@@ -178,7 +179,7 @@ Where $\sigma$ represents inverse document frequency value. $\rho$ is total numb
 \newline 
 And so the TF-IDF is represented by this formula
 \[ TF-IDF = \alpha*\sigma\]
-\par Main analysis of the data can be  conducted using Random Forest Algorithm, LSTM model and Logistic Regression. Nevertheless, it could be done differently using other ANNs(Artificial Neural Networks) and RNNs(Recursive NEural Networks) complemented by Naive Bayes classifier or SVM(Support Vector Machines).
+\par Main analysis of the data can be conducted using Random Forest Algorithm, LSTM model and Logistic Regression. Nevertheless, it could be done differently using other ANNs(Artificial Neural Networks) and RNNs(Recursive NEural Networks) complemented by Naive Bayes classifier or SVM(Support Vector Machines).
 
 \subsection{Algorithms and models used}
 \subsubsection {Models used to predict prices on the market} 
@@ -217,27 +218,62 @@ $C_t$ is new long-term memory $f_t$ is forget gate, $C_{t-1}$ is previous long-t
     h_t &= o_t * \tanh(C_t)
 \end{align*}
 $h_t$ is output of an entire LSTM unit and is called new short-term memory. Whereas $o_t$ decides whether to keep that new memory or discard of it.
-The hidden layer output is the value predicted by our system.
 \section{Conditions to be met before deployment of the system}
-
-\subsection{Learning conditions}
-
-\subsection{Duration of learning}
-
+\subsection{Data quality}
+Before deploying the system we need to make sure that it's trained on flawless dataset.The necessity is to have up-to-date legitimate data from trustworthy stock market data providers. Since our model trains on data from dataset it's crucial to include all important features which are Date, High, Low, Open, Close, Volume, Adj. Close.\cite{data_quality}
+\subsection{Proper data preparation}
+Data preprocessing is as important as model training. First of all data outliers will be either eradicated or filled out with mean, zero or otherwise interpolated with any other value responding to rows' type of values. Then set of techniques is applied to make data easier to compute. Those techniques are standardization, normalization and anomalies detection.
+Standardization is fundamentally refactoring our data to one format, e.g divide it onto High, Low, Open, Close, Volume variables. Now model has only one type of dataset to work with, so it's hastier and easier to train. By detecting anomalies we're deleting corrupted data points, which are beyond recovery, and outliers which bring noise i.e inaccuracy to out prediction. Normalization is data scaling which is especially useful in our case because LSTM models are highly sensitive to acute value change spikes.\cite{data_preproc_feature_sel_time_updates}
+\subsection{Feature selection}
+Feature selection is the next step of preparing data for our model. Here are some methods used to select features for our model, which will reduce learning time and induce accuracy.
+Filtering methods spot correlations between features and eliminate uncorrelated ones. Those are Pearson correlation, ANOVA F-test, and chi-square and others. PCA(Principal Component analysis) reduces dimensions by finding covariance between each variable and then selecting those principal components(variables) which have the strongest correlation, leaving behind others.
+\cite{data_preproc_feature_sel_time_updates}
+\subsection{Timely Data Updates}
+Real-time data updates are crucial to any stock recommendation system, which can only be used to capture current market situation. Many of these systems make use of live APIs from services like Alpha Vantage. A system is likely to make better recommendations if it is trained on consistently updated models, because market conditions can oscillate rapidly.\cite{up-to-date_data}
+\subsection{Learning duration}
+Learning duration depends on few factors, which are model complexity, size and type of data, data preprocessing and training approach. Of course there are more factors but we'll talk about plain ones. The more complex model is the longer it trains.  Models like linear regression, logistic regression can train relatively quickly, even on large datasets. Advanced machine learning models like Random Forests, Gradient Boosting Machines (e.g., XGBoost), and neural networks (LSTM, CNN, Transformer models for time series) have more parameters and thus take longer to train. If model is trained on data hourly than it's always up-to-date with newest data, on the other side is periodic training where model is trained between certain periods of time. Also if data is unstructured it generally takes more time to train model since it's hard to work with sentimental data. 
+Here's a table of model training time based on model type
+\begin{center}
+\begin{tabular}{|c | c|} 
+ \hline
+ Model Type & Training duration\\ [1ex] 
+ \hline\
+ Simple Models & Seconds to minutes \\ [1ex] 
+ \hline
+ Tree=based models& Minutes to hours\\ [1ex]
+ \hline
+ Basic Neural Networks & Hours\\ [1ex]
+ \hline
+ Advanced neural networks & Hours to days\\ [1ex] 
+ \hline
+ Ensemble models & Hours to days\\ [1ex]
+ \hline
+\end{tabular}
+\end{center}\cite{train_t}
 \section{Issues with the system}
-
-\subsection{Lack of data}
-
-\subsection{New item introduction}
-
-\subsection{Other problems}
+\subsection{Data quality and availability}
+Data gaps and inaccuracies is one of the most occurred problems with datasets since it's not always possible to preserve all data at once, some records can be missing. The next big problem is lag in data flow. It's not always possible to have continuous data updates throughout period of learning. Because of delays model doesn't have all the features updated from the same time period, so inexactitude appears.\cite{quality}
+\subsection{Overfitting to Historical Data}
+If model overfits to historical data it applies same measurements of features which were relevant in the past, hence it forecasts wrong value. Additionally, stock market is highly volatile and even without overfitting to historical data it's hard for model to get used to new patterns after rapid change. The predicted price is significantly dependent on previous data outliers in this case.\cite{overfit}
+\subsection{Scalability and Computational Demands}
+In order to process high-frequency data in real-time, large amount of computational power is required. It becomes even harder when data has different structure and needs prior preprocessing. So to complete all that either cloud computing is used or manual power station is needed to fulfill all demands. Not only that it's expensive to use cloud computing, since data needs to be secured as well.\cite{scalability}
+\subsection{Model Complexity and Interpretability}
+The more complex the model is the harder it is to understand which operations it does per one iteration. From that emerges the problem of interpretability. When model crashes we can't deduce why, thus we're unable to look through each step it does.\cite{complexity}
  
 \section{Enhancement of the system}
-
-\subsection{Augmentation of one system with another}
-
-\subsection{Systems competent of complementing stock recommendation system}
-
+\subsection{Integration of Diverse Data Sources}
+Using news in real-time and articles, social media, forums for sentiment analysis can capture market events influencing stock movement. Regular updates allow models to capture the latest trends, reducing errors caused by outdated data. This is particularly significant for time-sensitive models like LSTMs and XGBoost. Models working with updated data all the time can respond to sudden changes in market.\cite{diverse_datsrc}
+\subsection{Improving Data Preprocessing Techniques}
+Techniques such as moving averages, exponential smoothing, or wavelet transformations can help minimize price noise and show the underlying trends.
+For sentiment analysis on textual data, consider using advanced transformer models like BERT or GPT to catch subtle shifts in news related to stock market.
+Create automated pipelines for real-time data cleaning to quickly find outliers, missing values, or erroneous data points, making sure there's minimal disruption to the model's performance.
+\subsection{Incorporating Adaptive Learning and Model Retraining}
+Models can be either trained periodically on huge data sets and be insensitive to shifts stock market. Or trained continuously on data. being able to predict with high accuracy current price. because overtime features change their correlation consistent training mus be applied in order to address the problem.\cite{adaptive_learning} 
+\subsection{Reinforcement one system's cons with another system's pros}
+Reinforcement learning models are often used with temporal models such as CNN (Convolutional Neural Networks) to find trends and reduce noise, which improves forecasting. Reinforcement learning used with supervised learning is one of the possibilities to improve model. Reinforced-learning model enhances decisions from feedback from the environment. Next possibility is statistical models used with machine learning models. Here statistical models predict price while machine learning models detect complex patterns to provide more accurate results.\cite{reinfocment}
+\subsection{Systems adept to complement each other}
+ (RL) Reinforcement Learning with Supervised Learning can improve prediction accuracy. Examples of reinforcement models capable of complementing main prediction model are (DQN) Deep Q-Networks, (PPO) Proximal Policy Optimization, Actor-Critic Models etc. Supervised learning establishes basic prediction, after what reinforcement model adapts to changes on of the market in real time to optimize decision-making. Examples of supervised learning models: Random Forest, (SVM) Support Vector Maxchines, Logistic Regression etc.
+ \par Blending statistical methods like ARIMA with machine learning algorithms (XGBoost). This works particularly good with volatile markets since ML models search for intricate patterns and then it makes a prediction based on those patterns. Examples of statistical models: (ARIMA) AutoRegressive Integrated Moving Average, (SMA) Simple Moving Average, (EMA) Exponential Moving Average, Facebook Prophet etc. As for deep learning models could be Long Short-Term Memory (LSTM), (GRU) Gated Recurrent Unit etc. \cite{adept_sys}\cite{adept_sys1}\cite{adept_sys2}\cite{adept_sys3}
 
 \newpage
 \bibliography{literature}
