@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.26)  31 OCT 2024 20:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.9.26)  21 NOV 2024 13:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -293,53 +293,103 @@ Package: cite 2015/02/27  v 5.5
 \WF@everypar=\toks25
 Package: wrapfig 2003/01/31  v 3.6
 )
+(C:\Users\misha\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\misha\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count293
+\Gm@cntv=\count294
+\c@Gm@tempcnt=\count295
+\Gm@bindingoffset=\dimen159
+\Gm@wd@mp=\dimen160
+\Gm@odd@mp=\dimen161
+\Gm@even@mp=\dimen162
+\Gm@layoutwidth=\dimen163
+\Gm@layoutheight=\dimen164
+\Gm@layouthoffset=\dimen165
+\Gm@layoutvoffset=\dimen166
+\Gm@dimlist=\toks26
+
+(C:\Users\misha\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: 
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(48.36967pt, 500.76852pt, 48.36967pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=500.76852pt
+* \textheight=674.33032pt
+* \oddsidemargin=-23.90031pt
+* \evensidemargin=-23.90031pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=111.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
 (C:\Users\misha\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count293
+\l__color_backend_stack_int=\count296
 \l__pdf_internal_box=\box55
-) (main.aux
-
-LaTeX Warning: Label `fig:Types' multiply defined.
-
 )
+No file main.aux.
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for IL2/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for IL2/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 
 (C:\Users\misha\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count294
-\scratchdimen=\dimen159
+\scratchcounter=\count297
+\scratchdimen=\dimen167
 \scratchbox=\box56
-\nofMPsegments=\count295
-\nofMParguments=\count296
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count297
-\MPscratchDim=\dimen160
-\MPnumerator=\count298
-\makeMPintoPDFobject=\count299
-\everyMPtoPDFconversion=\toks27
+\nofMPsegments=\count298
+\nofMParguments=\count299
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count300
+\MPscratchDim=\dimen168
+\MPnumerator=\count301
+\makeMPintoPDFobject=\count302
+\everyMPtoPDFconversion=\toks28
 )
 (C:\Users\misha\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -351,222 +401,231 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 19.
- (main.out) (main.out)
+Package hyperref Info: Link coloring OFF on input line 26.
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
-<images/STU-FIIT-anch.png, id=39, 583.17876pt x 128.48pt>
-File: images/STU-FIIT-anch.png Graphic file (type png)
-<use images/STU-FIIT-anch.png>
-Package pdftex.def Info: images/STU-FIIT-anch.png  used on input line 31.
-(pdftex.def)             Requested size: 345.0pt x 76.00838pt.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(48.36967pt, 500.76852pt, 48.36967pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=500.76852pt
+* \textheight=674.33032pt
+* \oddsidemargin=-23.90031pt
+* \evensidemargin=-23.90031pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=111.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+! Too many }'s.
+l.29 ...c year 2024/25, management: Martin Sábo}}
+                                                  
+? 
+
+
+[1{C:/Users/misha/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+
+
+]
 LaTeX Font Info:    Trying to load font information for IL2+cmtt on input line 
-41.
+40.
 
 (C:\Users\misha\AppData\Local\Programs\MiKTeX\tex/cslatex/base\il2cmtt.fd
 File: il2cmtt.fd 1997/08/20 CSLaTeX font definitions
 )
 
-[1
-
-{C:/Users/misha/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <C:/Users/mis
-ha/OneDrive/Documents/Materialy_a_cvičenia_pre_študovanie/MIP_B/ARTICLE/image
-s/STU-FIIT-anch.png>]
-
-LaTeX Warning: Citation `arch_rec_sys' on page 2 undefined on input line 80.
-
-(main.toc)
-\tf@toc=\write4
-\openout4 = `main.toc'.
+LaTeX Warning: Citation `arch_rec_sys' on page 2 undefined on input line 77.
 
 
 
 [2]
+No file main.toc.
+\tf@toc=\write4
+\openout4 = `main.toc'.
 
-LaTeX Warning: Citation `vars_rec_sys' on page 3 undefined on input line 104.
-
-<images/system_vars.png, id=74, 687.56876pt x 354.32375pt>
-File: images/system_vars.png Graphic file (type png)
-<use images/system_vars.png>
-Package pdftex.def Info: images/system_vars.png  used on input line 110.
-(pdftex.def)             Requested size: 413.99895pt x 213.34198pt.
-
-Overfull \hbox (68.99895pt too wide) in paragraph at lines 110--111
- [][] 
- []
-
-
-LaTeX Warning: Citation `wang2019review' on page 3 undefined on input line 111.
-
-
+<images/STU-FIIT-anch.png, id=24, 583.17876pt x 128.48pt>
+File: images/STU-FIIT-anch.png Graphic file (type png)
+<use images/STU-FIIT-anch.png>
+Package pdftex.def Info: images/STU-FIIT-anch.png  used on input line 87.
+(pdftex.def)             Requested size: 500.76852pt x 110.32791pt.
 
 
 [3 <C:/Users/misha/OneDrive/Documents/Materialy_a_cvičenia_pre_študovanie/MIP
+_B/ARTICLE/images/STU-FIIT-anch.png>]
+
+LaTeX Warning: Citation `vars_rec_sys' on page 4 undefined on input line 100.
+
+
+LaTeX Warning: Citation `stock_rec' on page 4 undefined on input line 102.
+
+
+LaTeX Warning: Citation `stock_prices' on page 4 undefined on input line 102.
+
+<images/system_vars.png, id=34, 687.56876pt x 354.32375pt>
+File: images/system_vars.png Graphic file (type png)
+<use images/system_vars.png>
+Package pdftex.def Info: images/system_vars.png  used on input line 108.
+(pdftex.def)             Requested size: 500.76852pt x 258.05946pt.
+
+LaTeX Warning: Citation `wang2019review' on page 4 undefined on input line 109.
+
+
+
+
+[4 <C:/Users/misha/OneDrive/Documents/Materialy_a_cvičenia_pre_študovanie/MIP
 _B/ARTICLE/images/system_vars.png>]
-
-[4]
-
-[5]
-Overfull \hbox (2.5283pt too wide) in paragraph at lines 204--205
-\IL2/cmr/m/n/10 meth-ods of lower pri-or-ity choose be-tween higher qual-ity te
-ch-niques whether
- []
-
-<images/system_types.png, id=90, 650.43pt x 234.8775pt>
+<images/system_types.png, id=46, 523.9575pt x 316.3017pt>
 File: images/system_types.png Graphic file (type png)
 <use images/system_types.png>
-Package pdftex.def Info: images/system_types.png  used on input line 213.
-(pdftex.def)             Requested size: 413.99895pt x 149.50394pt.
-
-Overfull \hbox (68.99895pt too wide) in paragraph at lines 213--214
- [][] 
- []
+Package pdftex.def Info: images/system_types.png  used on input line 132.
+(pdftex.def)             Requested size: 500.76852pt x 302.30927pt.
 
 
-LaTeX Warning: Citation `music_rec' on page 6 undefined on input line 217.
+LaTeX Warning: Citation `music_rec' on page 5 undefined on input line 136.
 
 
-LaTeX Warning: Citation `book_rec' on page 6 undefined on input line 218.
+LaTeX Warning: Citation `book_rec' on page 5 undefined on input line 137.
+
+
+
+[5 <C:/Users/misha/OneDrive/Documents/Materialy_a_cvičenia_pre_študovanie/MIP
+_B/ARTICLE/images/system_types.png>]
+
+LaTeX Warning: Citation `file_rec' on page 6 undefined on input line 138.
+
+
+LaTeX Warning: Citation `movie_rec' on page 6 undefined on input line 139.
+
+
+LaTeX Warning: Citation `shopping_rec' on page 6 undefined on input line 140.
+
+
+LaTeX Warning: Citation `amazon_recsys' on page 6 undefined on input line 140.
+
+<images/architecture_diagram.png, id=54, 1065.9825pt x 589.9641pt>
+File: images/architecture_diagram.png Graphic file (type png)
+<use images/architecture_diagram.png>
+Package pdftex.def Info: images/architecture_diagram.png  used on input line 14
+8.
+(pdftex.def)             Requested size: 500.76852pt x 277.14812pt.
+
+LaTeX Warning: Citation `stock_comp' on page 6 undefined on input line 155.
 
 
 
 [6 <C:/Users/misha/OneDrive/Documents/Materialy_a_cvičenia_pre_študovanie/MIP
-_B/ARTICLE/images/system_types.png>]
+_B/ARTICLE/images/architecture_diagram.png>]
 
-LaTeX Warning: Citation `file_rec' on page 7 undefined on input line 219.
-
-
-LaTeX Warning: Citation `movie_rec' on page 7 undefined on input line 220.
+LaTeX Warning: Citation `dimens_red' on page 7 undefined on input line 164.
 
 
-LaTeX Warning: Citation `shopping_rec' on page 7 undefined on input line 221.
+LaTeX Warning: Citation `nlp_research1' on page 7 undefined on input line 165.
 
 
-LaTeX Warning: Citation `amazon_recsys' on page 7 undefined on input line 221.
+LaTeX Warning: Citation `nlp_research2' on page 7 undefined on input line 165.
+
+
+LaTeX Warning: Citation `stock_rec' on page 7 undefined on input line 167.
+
+
+LaTeX Warning: Citation `stem_alg' on page 7 undefined on input line 167.
+
+
+LaTeX Warning: Citation `lemm_alg' on page 7 undefined on input line 167.
 
 
 
 [7]
-<images/architecture_diagram.png, id=102, 551.1792pt x 483.2454pt>
-File: images/architecture_diagram.png Graphic file (type png)
-<use images/architecture_diagram.png>
-Package pdftex.def Info: images/architecture_diagram.png  used on input line 23
-9.
-(pdftex.def)             Requested size: 413.99895pt x 362.98619pt.
 
-Overfull \hbox (68.99895pt too wide) in paragraph at lines 239--240
- [][] 
- []
+LaTeX Warning: Citation `data_quality' on page 8 undefined on input line 221.
 
 
 
-[8 <C:/Users/misha/OneDrive/Documents/Materialy_a_cvičenia_pre_študovanie/MIP
-_B/ARTICLE/images/architecture_diagram.png>]
+[8]
+
+LaTeX Warning: Citation `data_preproc_feature_sel_time_updates' on page 9 undef
+ined on input line 224.
+
+
+LaTeX Warning: Citation `data_preproc_feature_sel_time_updates' on page 9 undef
+ined on input line 228.
+
+
+LaTeX Warning: Citation `up-to-date_data' on page 9 undefined on input line 230
+.
+
+
+LaTeX Warning: Citation `train_t' on page 9 undefined on input line 250.
+
+
+LaTeX Warning: Citation `quality' on page 9 undefined on input line 253.
+
+
 
 [9]
 
+LaTeX Warning: Citation `overfit' on page 10 undefined on input line 255.
+
+
+LaTeX Warning: Citation `scalability' on page 10 undefined on input line 257.
+
+
+LaTeX Warning: Citation `complexity' on page 10 undefined on input line 259.
+
+
+LaTeX Warning: Citation `diverse_datsrc' on page 10 undefined on input line 263
+.
+
+
+LaTeX Warning: Citation `adaptive_learning' on page 10 undefined on input line 
+269.
+
+
+LaTeX Warning: Citation `reinfocment' on page 10 undefined on input line 271.
+
+
+
 [10]
 
-[11] (main.bbl
-Underfull \hbox (badness 2111) in paragraph at lines 4--9
-[]\IL2/cmr/m/n/10 Arkadiusz Krysik.  Movie rec-om-men-da-tion sys-tem: How it w
-orks
- []
+LaTeX Warning: Citation `adept_sys' on page 11 undefined on input line 274.
 
 
-Underfull \hbox (badness 3769) in paragraph at lines 11--17
-\IL2/cmr/m/n/10 ing plat-forms lever-age ai in 2024?  []$\IL2/cmtt/m/n/10 https
- : / / stratoflow . com /
- []
+LaTeX Warning: Citation `adept_sys1' on page 11 undefined on input line 274.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--24
-[]\IL2/cmr/m/n/10 Microsoft.  Rec-om-mended files in of-fice.
- []
+LaTeX Warning: Citation `adept_sys2' on page 11 undefined on input line 274.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--24
-[]$\IL2/cmtt/m/n/10 https : / / support . microsoft . com / en-[]us / office /
- []
+LaTeX Warning: Citation `adept_sys3' on page 11 undefined on input line 274.
 
 
-Overfull \hbox (21.05257pt too wide) in paragraph at lines 19--24
-\IL2/cmtt/m/n/10 recommended-[]files-[]in-[]office-[]232c8322-[]1060-[]4453-[]b
-d69-[]a4770efe731e# :
- []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--24
-\IL2/cmtt/m/n/10 ~ : text = Microsoft % 20Office % 20displays % 20a % 20list ,[
-] by % 20people %
- []
-
-
-Underfull \hbox (badness 5260) in paragraph at lines 26--32
-[]\IL2/cmr/m/n/10 Moneka.  Book rec-om-men-da-tion sys-tem.  []$\IL2/cmtt/m/n/1
-0 https : / / medium . com /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--47
-[]\IL2/cmr/m/n/10 Milos Simic Safa Bouguezzi.  How does the ama-zon rec-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--47
-\IL2/cmr/m/n/10 om-men-da-tion sys-tem work?  []$\IL2/cmtt/m/n/10 https : / / w
-ww . baeldung . com /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--47
-\IL2/cmtt/m/n/10 cs / amazon-[]recommendation-[]system# : ~ : text = Collaborat
-ive %
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--47
-\IL2/cmtt/m/n/10 20filtering % 20techniques % 20are % 20the ,[] Their % 20brows
-ing %
- []
-
-
-Underfull \hbox (badness 1735) in paragraph at lines 41--47
-\IL2/cmtt/m/n/10 20behavior % 20and % 20ratings$[]\IL2/cmr/m/n/10 , March 2024.
-  Last ac-cessed Oc-to-ber
- []
-
-! Misplaced alignment tab character &.
-l.51   in banking: Use cases &
-                               insights.
-? 
-
-Underfull \hbox (badness 6016) in paragraph at lines 49--56
-\IL2/cmtt/m/n/10 kanini . com / blog / banking-[]recommendation-[]system-[]use-
-[]cases/$[]\IL2/cmr/m/n/10 , May
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--64
-[]\IL2/cmr/m/n/10 Trapica.  Top 10 ecom-merce rec-om-men-da-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--64
-\IL2/cmr/m/n/10 tion sys-tems.  []$\IL2/cmtt/m/n/10 https : / / medium . com / 
-trapica /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--64
-\IL2/cmtt/m/n/10 top-[]10-[]ecommerce-[]recommendation-[]systems-[]ce0a7a2bf4d1
-$[]\IL2/cmr/m/n/10 , Febru-
- []
-
-)
-
-[12] (main.aux)
+[11]
+No file main.bbl.
+(main.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-08-30>
@@ -576,42 +635,55 @@ L3 programming layer <2024-08-30>
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 798D758BA086B6BB331648422A5D68C5;2024.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D75B6FB86B304026D120E31783AA2A97;6037.
  ) 
 Here is how much of TeX's memory you used:
- 9863 strings out of 473899
- 152786 string characters out of 5726500
- 547187 words of memory out of 5000000
- 32569 multiletter control sequences out of 15000+600000
- 573140 words of font info for 74 fonts, out of 8000000 for 9000
+ 10345 strings out of 473899
+ 160202 string characters out of 5726500
+ 561409 words of memory out of 5000000
+ 33050 multiletter control sequences out of 15000+600000
+ 570725 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,7n,79p,757b,681s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi600\c
-sti10.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/d
-pi600\cstt10.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/public/cs
-fonts/dpi600\csbxti10.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/
-jknappen/ec/dpi600\tcrm1000.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/l
-jfour/public/csfonts/dpi600\csbx12.pk> <C:\Users\misha\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/public/csfonts/dpi600\csbx10.pk> <C:\Users\misha\AppData\Local\MiK
-TeX\fonts/pk/ljfour/public/csfonts/dpi720\csbx12.pk> <C:\Users\misha\AppData\Lo
-cal\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi600\cssl10.pk> <C:\Users\misha\App
-Data\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi600\csr10.pk> <C:\Users\mis
-ha\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi600\csr8.pk> <C:\User
-s\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0600.pk> <C
-:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.
-pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi600\
-csbx9.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/d
-pi600\cstt9.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csf
-onts/dpi600\csr9.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/publi
-c/csfonts/dpi600\csr12.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/
-ljfour/public/csfonts/dpi600\csr17.pk>
-Output written on main.pdf (12 pages, 427113 bytes).
+ 75i,10n,79p,1016b,461s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+ <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm10
+00.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi6
+00\csbx10.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfon
+ts/dpi600\csbx12.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/publi
+c/csfonts/dpi720\csbx12.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfou
+r/public/csfonts/dpi600\cssl10.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/p
+k/ljfour/public/csfonts/dpi600\csr8.pk> <C:\Users\misha\AppData\Local\MiKTeX\fo
+nts/pk/ljfour/jknappen/ec/dpi600\tcrm0600.pk> <C:\Users\misha\AppData\Local\MiK
+TeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm0900.pk> <C:\Users\misha\AppData\Loc
+al\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi600\csbx9.pk> <C:\Users\misha\AppDa
+ta\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi600\cstt9.pk> <C:\Users\misha
+\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi600\csr9.pk> <C:\Users\
+misha\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi600\csr12.pk> <C:\
+Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi600\csr17.pk
+> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi600\cs
+r7.pk> <C:\Users\misha\AppData\Local\MiKTeX\fonts/pk/ljfour/public/csfonts/dpi6
+00\csr10.pk><C:/Users/misha/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Users/misha/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb><C:/Users/misha/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/misha/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/misha/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/misha/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on main.pdf (11 pages, 596993 bytes).
 PDF statistics:
- 673 PDF objects out of 1000 (max. 8388607)
- 36 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 559 PDF objects out of 1000 (max. 8388607)
+ 44 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
